@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="splash-screen">
+  <div class="splash-content">
+    <h1>Crafting Intelligent Solutions — Ahamed Saif</h1>
+
+    <p>Turning Ideas into Impactful Code 💡</p>
+  </div>
+</div>
+
+  <div class="hero-background">
+    <header>
+      <h1>Ahamed Saif</h1>
+      <p>Web Developer | Data Analysis | AI & ML Enthusiast | Aspiring Software Engineer
+         | Turning Ideas into Code | </p>
+    </header>
+  </div>
+
+ <section id="about" data-aos="fade-right">
+    <h2>About Me</h2>
+    <p>I’m Ahamed Saif, a CSE student specializing in AI/ML. I turn ideas into smart, practical tech that works hard and scales fast. I believe in building solid products, writing clean, reliable code, and growing small ideas into real businesses. I work with Python, Java, React.js, SQL and other modern language to create solutions that solve real world problems and add real value.</p>
+  </section>
+
+ <section id="projects" data-aos="fade-right">
+  <h2>Projects</h2>
+
+  <div class="project-card" data-aos="zoom-in">
+    <h3>Project Cloud</h3>
+    <p>An AI-based skincare platform that analyzes skin, recommends personalized products, and suggests home remedies within your budget.</p>
+  </div>
+
+  <div class="project-card" data-aos="zoom-in">
+    <h3>Website Blocker</h3>
+    <p>A Chrome extension used to block websites and minimize distractions for better productivity.</p>
+  </div>
+
+  <div class="project-card" data-aos="zoom-in">
+    <h3>Barcode & QR Scanner</h3>
+    <p>Real-time scanner using Python & OpenCV with product safety verification and auto URL redirection.</p>
+  </div>
+</section>
+
+  </section>
+ <section id="resume" data-aos="fade-right">
+  <h2>Resume</h2>
+  <p>Here is my updated resume outlining my education, technical skills, and project experience. Feel free to download it and reach out if you'd like to connect.</p>
+
+  <a href="Resume.pdf"_blank">
+    <button style="
+     margin-top: 1rem;
+      padding: 12px 24px;
+      background-color: #1f1f1f;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;">
+
+      📄 Download Resume
+    </button>
+  </a>
+</section>
+
+
+  <section id="contact" data-aos="fade-right">
+  <h2>Contact</h2>
+
+  <div class="contact-card" data-aos="zoom-in">
+    <h3>Email</h3>
+    
+    <a href="mailto:ahamedsaif64@gmail.com">ahamedsaif64@gmail.com</a>
+  </div>
+
+  <div class="contact-card" data-aos="zoom-in" data-aos-delay="100">
+    <h3>Phone</h3>
+    
+    <p>📞 8072757824</p>
+  </div>
+
+  <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
+    <h3>LinkedIn</h3>
+    
+    <a href="https://www.linkedin.com/in/ahamed-saif-394858291/" target="_blank">
+      linkedin.com/in/AhamedSaif
+    </a>
+  </div>
+</section>
+
+
+  <!-- AOS JS -->
+
+
+</body>
+<!-- Theme Toggle Button -->
+<label class="switch">
+  <input type="checkbox" id="theme-toggle-checkbox">
+  <span class="slider round"></span>
+</label>
+
+<!-- Theme Toggle Script -->
+<script>
+  const checkbox = document.getElementById('theme-toggle-checkbox');
+  const body = document.body;
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+    checkbox.checked = true;
+  }
+
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+
+<!-- AOS Library & Init -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      offset: 120,
+      easing: 'ease-in-out'
+    });
+
+    // Splash screen logic
+    setTimeout(() => {
+      const splash = document.getElementById('splash-screen');
+      if (splash) {
+        splash.style.opacity = 0;
+        setTimeout(() => {
+          splash.style.display = 'none';
+        }, 1000); // Fade-out duration
+      }
+    }, 2000); // 10 seconds splash duration
+  });
+</script>
+
+
+</body>
+</html>
